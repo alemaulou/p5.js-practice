@@ -1,5 +1,5 @@
 // Distance between each horizontal location.
-let xspacing = 16;
+let xspacing = 20;
 
 // Width of entire wave
 let w;
@@ -8,10 +8,10 @@ let w;
 let theta = 0.0;
 
 // Height of wave
-let amplitude = 75.0;
+let amplitude = 50.0;
 
 // How many pixels before wave repeats
-let period = 500.0;
+let period = 200.0;
 
 // value for incrementing x
 let dx;
@@ -29,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-  background('#white');
+  background("black");
   calcWave();
   calcWave2();
   renderWave();
@@ -51,16 +51,16 @@ function calcWave() {
 
 function renderWave() {
   noStroke();
-  fill('red');
+  fill('white');
   // A simple way to draw the wave with an ellipse at each location
   for (let x = 0; x < yvalues.length; x++) {
-    ellipse(x * xspacing, height / 2 + yvalues[x], 16, 16);
+    ellipse(x * xspacing, height / 3 + yvalues[x], 16, 16);
   }
 }
 
 // Increment theta (try different values for 'angular velocity' here)
 function calcWave2() {
-  theta += .02;
+  theta += .012;
 
   // for every x value, calculate a y value with the sine function
   let x = theta;
