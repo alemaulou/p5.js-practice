@@ -1,5 +1,5 @@
 var n = 0;
-var c = 3;
+var c = 2;
 var cv;
 
 function centerCanvas() {
@@ -13,7 +13,7 @@ function setup() {
   centerCanvas();
   angleMode(DEGREES);
   colorMode(HSB);
-  background(0);
+  background("#white");
 }
 
 function windowResized() {
@@ -32,8 +32,9 @@ function draw() {
   var x = r * cos(a) + width/2;
   var y = r * sin(a) + height/2;
 
-  fill((2*a-r) % 255, 255, 255, 255);
-  ellipse(x,y, 4, 4);
+  fill((a-r) % 255, 255, 255, 255);
+  noStroke();
+  ellipse(x,y, 3, 3);
 
 
   n++;
