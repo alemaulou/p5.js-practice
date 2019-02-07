@@ -8,7 +8,7 @@ function centerCanvas() {
 }
 
 function setup() {
-  cv = createCanvas(800, 800);
+  cv = createCanvas(600, 600);
   centerCanvas();
   slider = createSlider(1,16,4,0.1);
 }
@@ -27,7 +27,7 @@ function draw() {
   noFill();
   strokeWeight(1);
   for(var a = 0; a < TWO_PI * 10; a+= 0.02) {
-    var r = 50 * cos(k* a);
+    var r = 25 * cos(k* a);
     var x = r*cos(a);
     var y = r*sin(a);
     vertex(x,y);
@@ -41,7 +41,7 @@ function draw() {
   noFill();
   strokeWeight(1);
   for(var a = 0; a < TWO_PI * 10; a+= 0.02) {
-    var r = 200 * cos(k* a);
+    var r = 100 * cos(k* a);
     var x = r*cos(a);
     var y = r*sin(a);
     vertex(x,y);
@@ -55,7 +55,7 @@ function draw() {
   noFill();
   strokeWeight(2);
   for(var a = 0; a < TWO_PI * 10; a+= 0.02) {
-    var r = 400 * cos(k* a);
+    var r = 200 * cos(k* a);
     var x = r*cos(a);
     var y = r*sin(a);
     vertex(x,y);
